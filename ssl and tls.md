@@ -6,6 +6,14 @@
 
 
 
+[ [0](https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A) ] *wiki*
+
+[ [1](https://www.cloudflare.com/zh-cn/learning/ssl/what-is-a-session-key/) ] *cloudfare:* *what is a session key*
+
+[ [2](https://halfrost.com/https-key-cipher/) ] *TLS 中的密钥计算*
+
+
+
 **传输层安全性协议**（**T**ransport **L**ayer **S**ecurity，**TLS**）及其前身**安全套接层**（**S**ecure **S**ockets **L**ayer，**SSL**）是一种安全协议，目的是为互联网通信提供安全及数据完整性保障。
 
 
@@ -17,7 +25,7 @@
 - 服务器发回其数字证书，此证书通常包含服务器的名称、受信任的证书颁发机构和服务器的公钥。
 - 客户端确认其颁发的证书的有效性。
 - 为了生成会话密钥用于安全连接，客户端使用服务器的公钥加密随机生成的密钥，并将其发送到服务器，只有服务器才能使用自己的私钥解密。
-- 利用随机数，双方生成用于加密和解密的对称密钥。这就是TLS协议的握手，握手完毕后的连接是安全的，直到连接（被）关闭。如果上述任何一个步骤失败，TLS握手过程就会失败，并且断开所有的连接。
+- 利用随机数，双方生成用于加密和解密的对称密钥。这就是*TLS*协议的握手，握手完毕后的连接是安全的，直到连接（被）关闭。如果上述任何一个步骤失败，*TLS*握手过程就会失败，并且断开所有的连接。
 
 
 
@@ -32,13 +40,7 @@
 - 身份验证：[RSA](https://zh.wikipedia.org/wiki/RSA)、[DSA](https://zh.wikipedia.org/wiki/DSA)、[ECDSA](https://zh.wikipedia.org/wiki/ECDSA)；
 - 密钥交换：[PSK](https://zh.wikipedia.org/wiki/PSK)、[Diffie-Hellman](https://zh.wikipedia.org/wiki/Diffie-Hellman)、[ECDH](https://zh.wikipedia.org/wiki/ECDH)；
 - 对称密钥加密：[RC4](https://zh.wikipedia.org/wiki/RC4)、[DES](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86)、[3DES](https://zh.wikipedia.org/wiki/3DES)、[AES](https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86)、[ChaCha20](https://zh.wikipedia.org/wiki/ChaCha20)以及[Camellia](https://zh.wikipedia.org/wiki/Camellia)；
-- [散列函数](https://zh.wikipedia.org/wiki/%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0)：[MD5](https://zh.wikipedia.org/wiki/MD5)、[SHA家族](https://zh.wikipedia.org/wiki/SHA%E5%AE%B6%E6%97%8F)。
+- 散列函数：[MD5](https://zh.wikipedia.org/wiki/MD5)、[SHA家族](https://zh.wikipedia.org/wiki/SHA%E5%AE%B6%E6%97%8F)。
 
 
-
-**参考**
-
-[ [0](https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A) ] *wiki*
-
-[ [1](https://www.cloudflare.com/zh-cn/learning/ssl/what-is-a-session-key/) ] *what is a session key*
 
