@@ -1,6 +1,8 @@
 \documentclass{article}
 
-\usepackage{ctex} \usepackage{amsmath} \usepackage{amssymb} 
+\usepackage{ctex} \usepackage[fleqn]{amsmath} \usepackage{amssymb} 
+\usepackage[colorlinks]{hyperref}
+\usepackage{graphicx}
 
 \usepackage[ruled,linesnumbered]{algorithm2e}
 
@@ -13,7 +15,7 @@
 \begin{document}
   % \maketitle
 \section{Selection Sort}
-\subsection{Pseudo-code}
+\subsection{Pseudocode}
 \SetKwFunction{Swap}{Swap}
 \SetKw{KwBy}{by}
 
@@ -22,7 +24,6 @@
   \KwIn{number \textit{Array} length \textit{l}}
   \KwOut{array in ascending order}
   \DontPrintSemicolon
-
   \For{$i \gets 0$ \KwTo $l-2$ \KwBy $1$}{
     $minIndex \gets i$\;
     \For{$j \gets i+1$ \KwTo $l-1$ \KwBy $1$}{
@@ -38,31 +39,33 @@
 \end{algorithm}
 
 \subsection{Analysis}
-
-\begin{equation*}
-    \begin{split}
-        \sum_{i=0}^{n-2}\sum_{j=i+1}^{n-1} 1  \ 
+\begin{align*}
+    \sum_{i=0}^{n-2}\sum_{j=i+1}^{n-1} 1  \ 
         &=\  \sum_{i=0}^{n-2} {(n-1)-(i+1) + 1} \\
         &=\  \sum_{i=0}^{n-1} {n-1-i} \\
         &=\  \sum_{i=0}^{n-1} i \\
         &=\  \frac{1}{2}n(n-1) \\
         &=\  \Theta(n^2)
-    \end{split}
-\end{equation*}
+\end{align*}
 
 \subsection{Mathematics}
-    \begin{equation*}
-        \begin{split}
-            \sum_{i=0}^{n-1} i\ 
-            &=\  0 + 1 + 2 + \cdots + (n-1)\\
-            &=\  \frac{1}{2} (\sum_{i=0}^{n-1} i  + \sum_{i=0}^{i=n-1} n-1-i) \\
-            &=\  \frac{1}{2} \sum_{i=0}^{n-1} n-1\\
-            &=\  \frac{1}{2} n(n-1)
-        \end{split}
-    \end{equation*}
+    \begin{align*}
+        \sum_{i=0}^{n-1} i\ 
+        &=\  0 + 1 + 2 + \cdots + (n-1)\\
+        &=\  \frac{1}{2}\, (\sum_{i=0}^{n-1} i  + \sum_{i=0}^{i=n-1} n-1-i) \\
+        &=\  \frac{1}{2}\, \sum_{i=0}^{n-1} n-1\\
+        &=\  \frac{1}{2}\, n(n-1)
+    \end{align*}
+
+\subsection{Other}
+
+    \begin{itemize}
+        \item 变量交换
+        \begin{itemize}
+            \item MDN: \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment}{JS-Destructuring assignment}
+            \item Wiki: \href{https://en.wikipedia.org/wiki/XOR_swap_algorithm}{XOR swap algorithm}
+        \end{itemize}
+        \item 知乎: \href{https://www.zhihu.com/question/31116687/answer/964367526}{如何理解异或含义}
+    \end{itemize}
+
 \end{document}
-
-
-\subsection{Coding}
-
-\subsubsection{ES6展开赋值}
