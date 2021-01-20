@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{ctex} \usepackage{amsmath} \usepackage{amssymb} 
+
+\usepackage[ruled,linesnumbered]{algorithm2e}
+
+
+\title{\heiti 选择排序}
+\author{winter}
+\date{\today}
+
+  
+\begin{document}
+  % \maketitle
+
+\section{Pseudo-code}
+\SetKwFunction{Swap}{Swap}
+\SetKw{KwBy}{by}
+
+\begin{algorithm}
+  \caption{Selection Sort}
+  \KwIn{number \textit{Array} length \textit{l}}
+  \KwOut{array in ascending order}
+  \DontPrintSemicolon
+
+  \For{$i \gets 0$ \KwTo $l-2$ \KwBy $1$}{
+    $minIndex \gets i$\;
+    \For{$j \gets i+1$ \KwTo $l-1$ \KwBy $1$}{
+        \If{$Array[minIndex] > Array[j]$}{
+            $minIndex \gets j$\;
+        }
+    }
+    \If{$minIndex \neq i$}{
+        \Swap{$Array[i]$, $Array[minIndex]$}
+    }
+  }
+  \Return{Array}
+\end{algorithm}
+
+\section{Analysis}
+
+\begin{equation*}
+    \begin{split}
+        \sum_{i=0}^{n-2}\sum_{j=i+1}^{n-1} 1  \ 
+        &=\  \sum_{i=0}^{n-2} {(n-1)-(i+1) + 1} \\
+        &=\  \sum_{i=0}^{n-1} {n-1-i} \\
+        &=\  \sum_{i=0}^{n-1} i \\
+        &=\  \frac{1}{2}n(n-1) \\
+        &=\  \Theta(n^2)
+    \end{split}
+\end{equation*}
+
+\section{Coding}
+
+\subsection{ES6展开赋值}
+
+\section{Mathematics}
+    \begin{equation*}
+        \begin{split}
+            \sum_{i=0}^{i=n-1} i\ 
+            &=\  0 + 1 + 2 + \cdots + (n-1)\\
+            &=\  \frac{1}{2} (\sum_{i=0}^{i=n-1} i  + \sum_{i=0}^{i=n-1} n-1-i) \\
+            &=\  \frac{1}{2} \sum_{i=0}^{i=n-1} n-1\\
+            &=\  \frac{1}{2} n(n-1)
+        \end{split}
+    \end{equation*}
+\end{document}
