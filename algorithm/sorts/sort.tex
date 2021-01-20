@@ -5,15 +5,15 @@
 \usepackage[ruled,linesnumbered]{algorithm2e}
 
 
-\title{\heiti 选择排序}
+\title{\heiti Sorts}
 \author{winter}
 \date{\today}
 
   
 \begin{document}
   % \maketitle
-
-\section{Pseudo-code}
+\section{Selection Sort}
+\subsection{Pseudo-code}
 \SetKwFunction{Swap}{Swap}
 \SetKw{KwBy}{by}
 
@@ -37,7 +37,7 @@
   \Return{Array}
 \end{algorithm}
 
-\section{Analysis}
+\subsection{Analysis}
 
 \begin{equation*}
     \begin{split}
@@ -50,18 +50,19 @@
     \end{split}
 \end{equation*}
 
-\section{Coding}
-
-\subsection{ES6展开赋值}
-
-\section{Mathematics}
+\subsection{Mathematics}
     \begin{equation*}
         \begin{split}
-            \sum_{i=0}^{i=n-1} i\ 
+            \sum_{i=0}^{n-1} i\ 
             &=\  0 + 1 + 2 + \cdots + (n-1)\\
-            &=\  \frac{1}{2} (\sum_{i=0}^{i=n-1} i  + \sum_{i=0}^{i=n-1} n-1-i) \\
-            &=\  \frac{1}{2} \sum_{i=0}^{i=n-1} n-1\\
+            &=\  \frac{1}{2} (\sum_{i=0}^{n-1} i  + \sum_{i=0}^{i=n-1} n-1-i) \\
+            &=\  \frac{1}{2} \sum_{i=0}^{n-1} n-1\\
             &=\  \frac{1}{2} n(n-1)
         \end{split}
     \end{equation*}
 \end{document}
+
+
+\subsection{Coding}
+
+\subsubsection{ES6展开赋值}
